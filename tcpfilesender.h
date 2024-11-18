@@ -17,6 +17,8 @@ public slots:
     void startTransfer();
     void updateClientProgress(qint64 numBytes);
     void openFile();
+    void IPSelect();
+    void PortSelect();
 private:
     QProgressBar     *clientProgressBar;
     QLabel           *clientStatusLabel;
@@ -25,6 +27,9 @@ private:
     QPushButton      *openButton;
     QDialogButtonBox *buttonBox;
     QTcpSocket       tcpClient;
+    QLineEdit        *ipLineEdit;
+    QLineEdit        *portLineEdit;
+
 
     qint64           totalBytes;
     qint64           bytesWritten;
